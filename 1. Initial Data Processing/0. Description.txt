@@ -1,0 +1,3 @@
+ParallelLines - This is the first draft of the function used in GenerationOfPoints. 
+
+GenerationOfPoints - This takes a file of AIS locations, groups them by ship tracks, and if it deems the grouping to be physical (if it passes a goodness of fit test) then these are considered 'good ship tracks'. To these good tracks, we generate sampling points which are as though there was a ship travelling on a parallel bearing at the same speed. These control points for sampling the background state are saved to different locations on Jasmin group workspaces.

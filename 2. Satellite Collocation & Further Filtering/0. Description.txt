@@ -1,0 +1,7 @@
+(Files discussed in order of which their operations must be carried out)
+
+Collocation_Script-Takes an input df, containing latitude and logitude of points. It matches these to the nearest SEVIRI pixels, and appends required retrievals of cloud properties. 
+
+PointMatching - Takes files from locations written to in 'Collocation_Script' and applies filtering conditions to each of them. It collects advected AIS points which keep both of their valid control points. These are saved to file paths in "/gws/nopw/j04/eo_shared_data_vol2/scratch/AO12/Cleaned_{Real, UCF, LCF}"
+
+AppendDistandSignal - From the above location we load the 3 file types that correspond to any given hour and match the control points to the real sampling location they correspond to. We append the distance of each of the control points from the point they are intended to be a counterfactual for. This was done to mitigate the concern that advection leads to conversion of control points on to the point they are a control for. An estimate of mass of aerosols deposited is also given on origional dataset, which is appended. 

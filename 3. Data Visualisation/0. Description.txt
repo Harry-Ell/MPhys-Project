@@ -1,0 +1,9 @@
+In each of these scripts/ notebooks, files are loaded in to memory with a glob function, point values are grouped using scipy's binned statistics package, and properties are displayed on plots. 
+
+AlbedoFilter - attempting to only include advection trajectories which are at some point visible in the cloud deck, i.e., have higher measured abledo. 
+
+MassFilter - Only including the most polluting ships in the global fleet. 
+
+AllRetsHist - Only filtering points based on uncertainties, no point matching to control points or otherwise. Returns a figure with 3 subfigires with histograms of cloud properties. Submitted via command line to high memory queue as kernel dies otherwise. 
+
+Making plots - Playng around with Cartopy to make a plot showing region in which we care about
